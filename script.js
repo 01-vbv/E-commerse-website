@@ -137,6 +137,7 @@ checkoutBtn.addEventListener("click", () => {
   }
   cartItems = [];
   totalPrice = 0;
+  total=0;
   cart.classList.toggle("show");
   checkoutBtn.classList.toggle("show");
   cartBtn.textContent = "Cart";
