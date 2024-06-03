@@ -127,7 +127,7 @@ function removeItem(id) {
 
 checkoutBtn.addEventListener("click", () => {
   cartItems.forEach((obj) => {
-    totalPrice = totalPrice + obj.quantity * obj.price;
+    totalPrice = (totalPrice + obj.quantity * obj.price).toFixed(2);
   });
 
   if (totalPrice === 0) {
