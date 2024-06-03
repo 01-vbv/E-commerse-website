@@ -127,13 +127,13 @@ function removeItem(id) {
 
 checkoutBtn.addEventListener("click", () => {
   cartItems.forEach((obj) => {
-    totalPrice = Number((totalPrice + obj.quantity * obj.price).toFixed(2));
+    totalPrice = Number(totalPrice + obj.quantity * obj.price);
   });
 
   if (totalPrice === 0) {
     alert(`Please select an Iten for checkout :)`);
   } else {
-    alert(`Thankyou for shopping. Your total price is ${totalPrice}`);
+    alert(`Thankyou for shopping. Your total price is ${totalPrice.toFixed(2)}`);
   }
   cartItems = [];
   totalPrice = 0;
